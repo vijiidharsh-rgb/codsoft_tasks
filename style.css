@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(135deg, #7d8595, #7a8ca0);
+
+    padding: 20px;
+}
+
+.calculator {
+    width: 420px;
+    max-width: 100%;
+
+    background: #0f1520;
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 50px rgba(90, 78, 78, 0.5);
+}
+
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+.header h1 {
+    color: white;
+    font-size: 20px;
+}
+
+#angleMode {
+    background: #47adcc;
+
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 8px 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.display-container {
+    background: #686d82;
+
+    border-radius: 12px;
+
+    padding: 15px;
+
+    margin-bottom: 15px;
+
+    min-height: 100px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+#expression {
+    color: #94a3b8;
+
+    font-size: 18px;
+
+    text-align: right;
+
+    min-height: 25px;
+
+    word-wrap: break-word;
+}
+
+#result {
+    color: white;
+
+    font-size: 34px;
+
+    font-weight: bold;
+
+    text-align: right;
+
+    margin-top: 8px;
+
+    word-wrap: break-word;
+}
+
+
+.scientific-buttons {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 8px;
+
+    margin-bottom: 10px;
+}
+
+.scientific-buttons button {
+    height: 45px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #334155;
+
+    color: #e2e8f0;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.scientific-buttons button:hover {
+    background: #475569;
+
+    transform: translateY(-2px);
+}
+
+/* Main buttons */
+
+.buttons {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 8px;
+}
+
+.buttons button {
+    height: 58px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #1e293b;
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.buttons button:hover {
+    background: #334155;
+
+    transform: translateY(-2px);
+}
+
+.buttons .operator {
+    background: #47adcc;
+};
+
+
+.buttons .operator:hover {
+    background: #1e8fb1;
+};
+
+
+.buttons .clear {
+    background: #39c2c7;
+}
+
+.buttons .clear:hover {
+    background: #040704;
+};
+
+
+.buttons .delete {
+    background: #47adcc;
+};
+
+
+.buttons .delete:hover {
+    background: #47adcc;
+};
+
+
+.buttons .answer {
+    background: #47adcc;
+};
+
+
+.buttons .answer:hover {
+    background: #47adcc;
+};
+
+
+.buttons .equals {
+    background: #16a34a;
+
+    grid-column: span 3;
+}
+
+.buttons .equals:hover {
+    background: #3b3f3c;
+}
+
+.zero {
+    grid-column: span 2;
+}
+
+
+.history-section {
+    margin-top: 20px;
+
+    background: #020617;
+
+    border-radius: 12px;
+
+    padding: 12px;
+}
+
+.history-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 10px;
+}
+
+.history-header h2 {
+    color: white;
+
+    font-size: 17px;
+}
+
+.history-header button {
+    border: none;
+
+    background: #47adcc;
+
+    color: white;
+
+    padding: 6px 10px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+#history {
+    max-height: 150px;
+
+    overflow-y: auto;
+}
+
+.history-item {
+    padding: 8px;
+
+    border-bottom: 1px solid #1e293b;
+
+    cursor: pointer;
+}
+
+.history-item:hover {
+    background: #1e293b;
+}
+
+.history-expression {
+    color: #94a3b8;
+
+    font-size: 13px;
+}
+
+.history-result {
+    color: white;
+
+    font-size: 16px;
+
+    margin-top: 3px;
+}
+
+/* Mobile */
+
+@media (max-width: 450px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .calculator {
+        padding: 14px;
+    }
+
+    .header h1 {
+        font-size: 17px;
+    }
+
+    #result {
+        font-size: 28px;
+    }
+
+    .scientific-buttons button {
+        height: 40px;
+
+        font-size: 13px;
+    }
+
+    .buttons button {
+        height: 52px;
+
+        font-size: 18px;
+    }
+}
